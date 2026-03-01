@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- OGP（Open Graph Protocol）SNSシェア時に重要なmeta -->
+    <meta property="og:title" content="いとおかし">
+    <meta property="og:description" content="グルテンフリー・白砂糖・乳製品不使用のお菓子の紹介サイト">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="いとおかし">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- favicon -->
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Kiwi+Maru&display=swap&text=いとおかし Cookie Lineup rumi kimura special gift for you and me 商品紹介" rel="stylesheet">    
+    
+    <script src="https://kit.fontawesome.com/0ec846d745.js" crossorigin="anonymous"></script>
+
+    <!-- js 読み込み   -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+    
+    <script src="js/jquery.inview.min.js" defer></script>
+    <script src="js/slick.min.js" defer></script>
+    
+    <script src="js/index.js" defer></script>
+    
+
+    <title>いとおかし</title>
+</head>
+<body>
+<!-- ✅ ローディング画面 -->
+<div class="loader_bg">
+    <img class="loader_img" src="images/main-logo.png" alt="ローディング画面">
+</div>
+    
+<header>
+    <div class="header-section">
+       
+        <h1 class="h1-logo">
+            <a href="#"><img src="images/main-logo.png" alt="メインロゴ画像"></a>
+        </h1>
+
+        <div class="header-section__menu">
+        <!-- オンラインショップ --> 
+            <a href="#" class="onlineshop-btn">online shop</a>
+            <!-- ハンバーガーメニュー -->
+            <div class="hamburger">
+                <span></span>
+            </div>
+
+            <!-- nav -->
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__text">Top</a>
+                    </li>
+                    <li><a href="index.html#orner" class="nav__text">Orner</a>
+                    </li>            
+                    <li><a href="index.html#lineup" class="nav__text">Lineup</a>
+                    </li>
+                    <li><a href="#" class="nav__text">Instagram</a>
+                    </li>
+                    <li><a href="#" class="nav__text">Online Shop</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>    
+    </div> 
+        <!-- topへ戻るボタン -->
+
+      <div>
+        <a id="pageTop" href="#">
+          <span class="arrow"></span>
+        </a>
+      </div>
+   
+</header>
+<!-- main -->
+<main>
+    <div id="kv" class="wrapper kv-slider">
+        <picture class="kv-img">
+        <!-- pc -->
+            <source srcset="images/kv-pc.webp" media="(min-width:768px)">
+        <!-- mobile -->
+            <img class="kv__img" src="images/kv.webp" alt="トップ画像" >
+        </picture>
+
+        <!-- スクロールバー -->
+        <div class="scroll fade-up pc">
+        <span>scroll</span>
+        </div> 
+    </div>
+
+    <section id="concept" class="wrapper">
+        <div class="heading__h2 js-fadeup">
+            <h2 class="heading__h2-ja">いとおかし</h2>
+            <h2 class="heading__h2-en"> special gift for you and me</h2>
+        </div>
+        <div class="consept-text js-fadeup">
+            <p class="consept-text__item"> グルテンフリー、白砂糖・卵・乳製品不使用。<br>からだにやさしく、素朴で飽きのこないおやつ。</p>
+            <p class="consept-text__item">気取らず、ふだんのおやつにも。<br>ちょっとした手土産に、さりげない贈り物に。 </p>
+            <p class="consept-text__item">ほっとするひとときを、いつでも。</p>
+
+        </div>
+        <div class="slider-contents">
+            <ul class="slider">
+                <li>
+                    <img class="imgarea" src="images/cookie1.jpg" alt="クッキー写真">
+                </li>
+                <li>
+                    <img class="imgarea" src="images/cookie2.jpg" alt="クッキー写真">
+                </li>
+                <li>
+                    <img class="imgarea" src="images/cafeImage1.jpg" alt="クッキー写真">
+                </li>
+                <li>
+                    <img class="imgarea" src="images/cookie3.jpg" alt="クッキー写真">
+                </li>
+                <li>
+                    <img class="imgarea" src="images/cookie4.jpg" alt="クッキー写真">
+                </li>
+                <li>
+                    <img class="imgarea" src="images/cafeImage2.jpg" alt="クッキー写真">
+                </li>
+                <li>
+                    <img class="imgarea" src="images/cookie1.jpg" alt="クッキー写真">
+                </li>
+                <li>
+                    <img class="imgarea" src="images/cookie2.jpg" alt="クッキー写真">
+                </li>
+                <li>
+                    <img class="imgarea" src="images/cafeImage1.jpg" alt="クッキー写真">
+                </li>
+                <li>
+                    <img class="imgarea" src="images/cookie3.jpg" alt="クッキー写真">
+                </li>
+                <li>
+                    <img class="imgarea" src="images/cookie4.jpg" alt="クッキー写真">
+                </li>
+                <li>
+                    <img class="imgarea" src="images/cafeImage2.jpg" alt="クッキー写真">
+                </li>
+
+
+            </ul>
+        </div>
+    </section>
+
+
+    <div id="orner" class="wrapper orner-section js-fadeup">
+        <div class="orner-section__text">
+                <p class="orner-section__text--top js-fadeup">いとおかし代表</p>
+                <p class="orner-section__text--top js-fadeup">きむらるみ</p>
+                <p class="orner-section__text--en">rumi kimura</p>
+            <div class="orner-section__text--bottom js-fadeup">
+                <p class="orner-section__p">高校生の頃、過度なダイエットで過食障害に。</p> 
+                <p class="orner-section__p">食べる罪悪感を和らげてくれたのは、<br>自分で工夫した手作りお菓子でした。</p>
+                <p class="orner-section__p">身体を気遣うお菓子で<br>皆様の日常が少しでも豊かになりますように。</p>
+                <p class="orner-section__p">食べ物を通じて【自分を大切にする習慣】を。</p>
+            </div>
+            
+        </div>
+        <div class="orner-section__image"><img class="orner-section__img" src="images/orner2.webp" alt="オーナー写真">
+        </div>
+    </div>
+
+    <section id="lineup">
+        <div class="deco-circle"><img src="images/bg-img.png" alt="">
+        </div>
+        <div class="heading__h2 lineup-heading__h2 js-fadeup">
+            <h2 class="heading__h2-ja">商品紹介</h2>
+            <h2 class="heading__h2-en">Cookie Lineup</h2>
+        </div>
+
+        <div class="lineup__imgbox js-fadeup">
+            <img class="lineup__img" src="images/lineup-image1.webp" alt="クッキー写真">
+            <img class="lineup__img" src="images/lineup-image2.webp" alt="クッキー写真">
+            <img class="lineup__img" src="images/lineup-image3.webp" alt="クッキー写真">            
+        </div>
+        <ul class="lineup__list">
+            <li class="lineup__item js-fadeup">
+                
+                <div class="lineup__contents">
+                    <span class="lineup__label">そば粉クッキー</span>
+                    <p class="lineup__text">主原料には、茨城県産のそば粉を使用。<br>やさしい素材だけで焼き上げました。<br>香ばしくほろっとほどけるような口あたりで、どこか懐かしい、素朴なあじわいが広がります。</p>
+                    <p class="lineup__text">抹茶とプレーン、2つのやさしい味わい。</p>
+                </div>
+
+                <div class="lineup__subimage">   
+                    <img class="lineup__subimage-img" src="images/cookie-img1.png" alt="クッキーイラスト">
+                </div> 
+                
+            </li>
+            <li class="lineup__item js-fadeup">
+                
+                <div class="lineup__contents">
+                    <span class="lineup__label">米粉クッキー</span>
+                    <p class="lineup__text">国産米粉100%、グルテンフリー。</p>
+                    <p class="lineup__text">オーガニックバニラの香りと天然塩のひとさじが、素材の甘さをふんわり引き立てます。 <br>リピーター続出の、ほっとするおやつです。</p>
+                    
+                </div>
+
+                <div class="lineup__subimage">   
+                    <img src="images/cookie-img2.png" alt="クッキーイラスト">
+                </div> 
+                
+            </li>
+            <li class="lineup__item js-fadeup">
+                
+                <div class="lineup__contents">
+                    <span class="lineup__label">酒粕クラッカー</span>
+                    <p class="lineup__text">パイのようなサクサク、ザクザクのクラッカー。</p>
+                    <p class="lineup__text">酒粕の風味と塩気が聞いてておつまみにぴったりです。食べてみるとまるでチーズクラッカー♪</p>
+                    
+                </div>
+
+                <div class="lineup__subimage">   
+                    <img src="images/cookie-img3.png" alt="クッキーイラスト">
+                </div> 
+                
+            </li>
+            <li class="lineup__item js-fadeup">
+                
+                <div class="lineup__contents">
+                    <span class="lineup__label">米粉スノーボール</span>
+                    <p class="lineup__text">そのままダージリンを飲んでるような、口の中でフワッと広がる紅茶のスノーボール。</p>
+                    <p class="lineup__text">すっと口で溶けて無くなるスノーボールと、紅茶で午後のひとときを。<p>
+                    
+                </div>
+
+                <div class="lineup__subimage">   
+                    <img src="images/cookie-img4.png" alt="クッキーイラスト">
+                </div> 
+                
+            </li>
+                        <li class="lineup__item js-fadeup">
+                
+                <div class="lineup__contents">
+                    <span class="lineup__label">そば粉チョコチップクッキー</span>
+                    <p class="lineup__text">ザクザクっとした食感の正体は有機オートミールとココナッツ。</p>
+                    <p class="lineup__text">ココアとほうじ茶の2つの味をお楽しみください。</p>
+                </div>
+
+                <div class="lineup__subimage">   
+                    <img src="images/cookie-img5.png" alt="クッキーイラスト">
+                </div> 
+                
+            </li>
+            <li class="lineup__item js-fadeup">
+                
+                <div class="lineup__contents">
+                    <span class="lineup__label">米粉ビスコッティ</span>
+                    <p class="lineup__text">小麦粉も卵も使わず、ビスコッティの醍醐味であるザクっとした食感を表現。</p>
+                    <p class="lineup__text">おすすめはコーヒーとともに。胡桃とチョコの最高コンビです。</p>
+                    
+                </div>
+
+                <div class="lineup__subimage">   
+                    <img src="images/cookie-img6.png" alt="クッキーイラスト">
+                </div> 
+                
+            </li>
+
+
+        </ul>
+
+    </section>
+
+    <!-- topへ戻るボタン -->
+     <div class="page-top">
+     </div>
+
+</main>
+
+
+<footer id="footer" class="wrapper">
+        <div class="heading__h2 js-fadeup">
+            <h2 class="heading__h2-ja">いとおかし</h2>
+            <h2 class="heading__h2-en"> special gift for you and me</h2>
+        </div>
+        <div class="footer__list">
+            <ul>
+            
+                <li><a href="#" class="onlineshop-btn">online shop</a>
+                </li>
+                <li class="footer__item">
+                    <p class="footer__text--top">Follow us</p>
+                    <a href="#"><i class="fa-brands fa-instagram footer__icon"></i></a>
+                </li>
+                <li>
+                    <a href="#" class="footer__link"><p>日本摂食障害協会</p></a>
+                    <p class="footer__text--bottom">いとおかしの売り上げの一部は、日本摂食障害協会に寄付しております</p>
+                </li>
+            </ul>
+
+
+        </div>
+
+
+
+    <div class="copyright">
+    <p class="copyright__text">&copy; 2025 itookashi All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>

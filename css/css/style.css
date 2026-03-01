@@ -1,0 +1,640 @@
+@charset "utf-8";
+/* ---------------- */
+/* cssカスタムプロパティ */
+/* ---------------- */
+:root {
+  --main-font: 12px;
+  --maincolor: #f8f6e7;
+  --subcolor: #6b6766;
+  --subfontcolor: #0d3d31;
+
+}
+/* pc設定:root */
+@media (min-width: 768px) {
+  :root {
+    --main-font: 16px;
+  }
+}
+/* ---------------- */
+/* mobile first 共通設定 */
+/* ---------------- */
+
+html {
+  scroll-behavior: smooth;
+}
+body{
+  font-family: "Zen Maru Gothic", serif;
+  font-size:var(--main-font);
+  background-color: var(--maincolor);
+  
+  overflow-x: hidden;
+}
+main{
+  padding: 0 16px;
+  padding-top: 130px;
+}
+.wrapper{
+  width: 90%;
+  max-width: 1100px;
+  margin: 0px auto 150px;
+}
+a{
+  transition: transform 0.5s ease;
+}
+/* ---------------- */
+/* pc 共通設定 */
+/* ---------------- */
+@media(min-width:768px){
+/* リンクホバーすると要素が１．１倍/少し透明に */
+a:hover{
+  transform: scale(1.1); 
+  opacity: 0.8;
+}
+  a:hover .btn-text {
+opacity: 1;
+ 
+}
+}  
+/* フェードアップｊｓ  */
+.js-fadeup {
+  opacity: 0;
+  transform: translateY(50px); 
+  transition: opacity 1s ease, transform 1s ease; 
+}
+.js-fadeup.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* ---------------- */
+/* topへ戻るボタン */
+/* ---------------- */
+
+#pageTop{
+ opacity: 0;
+ pointer-events: none;
+  position: fixed;
+  bottom: 5%;
+  right: 5%; 
+  background-color: #ebd9cb;
+  transition: opacity 0.5s ease;
+  z-index: 1000;
+  /*! position: relative; */
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+
+}
+#pageTop.show {
+  opacity: 1;
+  pointer-events: auto; /* ← 表示されたらクリック可能に */
+  /*! transition: opacity 0.5s ease; */
+   transition: transform 0.5s ease;
+}
+.btn-text{
+  color: white;
+  font-size: var(--main-font);
+  font-weight: 600;
+  transform: translate(-50%,-50%);
+  /*! transition: opacity 0.5 ease; */
+}
+#pageTop a {
+  position: absolute;
+  top: 47%;
+  left: 53%;  
+ 
+  cursor: unset;
+}
+a:hover .btn-text {
+opacity: 1;
+}
+.arrow {
+  position: relative;
+  display: inline-block;
+  /*! width: 0px; */
+  /*! height: 56px; */
+}
+
+.arrow::before,
+.arrow::after {
+  content: "";
+  position: absolute;
+  left: 29px;
+  width: 3px;
+  height: 22px;
+  border-radius: 9999px;
+  background-color: #f8f6e7;
+  transform-origin: 50% 2px;
+  top: 8px;
+}
+
+.arrow::before {
+  transform: rotate(45deg);
+}
+
+.arrow::after {
+  transform: rotate(-45deg);
+}
+/* ---------------- */
+/* header */
+/* ---------------- */
+header{
+  position: fixed;
+  width: 100%;
+  
+  z-index: 100;
+  background-color: rgba(248,246,231,0.5);
+}
+.header-section{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  /*! background-color: transparent; */
+  height: 15vh;
+  padding: 0 20px;
+  margin: 0 auto;
+  /*! position: fixed; */
+  /*! width: 100%; */
+}
+.header-section__menu{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.h1-logo{
+  width: 80px;
+}
+@media(min-width:768px){
+  .h1-logo{
+  width: 100px;
+}
+}
+.onlineshop-btn{
+  display: inline-block;
+  background-color: #fff;
+  color:var(--subcolor);
+  font-weight: 600;
+  padding: 7px 25px;
+  border-radius: 20px;
+  letter-spacing: 1px;
+  border: 0.2px solid #ebd9cb;
+}
+
+/* ---------------- */
+/* ハンバーガーメニュー */
+/* ---------------- */
+.hamburger{
+    position: relative;
+    width: 60px;
+    height: 60px;
+   
+    background-color: transparent;
+    z-index: 110;
+    top: 0;
+    right: 0;
+    
+    }
+.hamburger span{
+    position: absolute;
+    top:30px;
+    left:18px;
+    width:40%;
+    height: 2px;
+    background: #3e3428;
+    border-radius: 5px;
+    transition: .5s;
+    }
+.hamburger span::before,
+.hamburger span::after{
+    content:"";
+    position: absolute;
+    transition: 0.5s;
+    width:100%;
+    height: 2px;
+    background: #3e3428;
+    border-radius: 5px;
+    }
+.hamburger span::before{
+    top:-10px;
+    }
+.hamburger span::after {
+    top:10px;
+    }
+.open .hamburger span{
+    background-color: transparent;
+    }
+.open .hamburger span::before{
+    transform: rotate(45deg);
+    top:1px;
+    }
+.open .hamburger span::after{
+    transform: rotate(-45deg);
+    top: 1px;
+    }
+  .nav{
+    opacity: 0;
+    transform: translateX(100%);
+    transition: 0.5s ease;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+  background-color: var(--maincolor); 
+}
+.open .nav{
+    opacity: 1;
+    transform: translateX(0);
+   
+ } 
+    .nav__list{
+  display: inline-flex;
+  flex-direction: column;
+  /*! gap: 30px; */
+  position: fixed;
+  top:20%;
+  left: 20%;
+}
+ .nav__list{
+    position: relative;
+    top: 20%;
+   transition: transform 0.5s ease , opacity 0.5s ease;
+}
+.nav__text{
+  font-size: 16px;
+  color: var(--subcolor);
+  margin:30px auto 0 10%;
+  font-weight: 800;
+  
+}
+
+/* ---------------- */
+/* kv */
+/* ---------------- */
+
+
+.kv__img-box{
+  height: 100vh;
+  position: relative;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+}
+.kv__img{
+  border-radius: 2rem;
+}
+/* ---------------- */
+/* concept */
+/* ---------------- */
+#concept{
+  position: relative;
+}
+.heading__h2 {
+      display: flex;
+      gap: 20px; 
+      justify-content:flex-end;
+  margin-bottom: 80px;
+    
+      margin-right: 20%;
+    }
+    .heading__h2-ja,
+    .heading__h2-en {
+      writing-mode: vertical-rl; 
+      text-orientation: mixed;        /* 英字が自然な向きに */
+      
+
+    }
+
+    
+.heading__h2-ja{
+  font-size:32px;
+  font-weight: 800;
+  letter-spacing: 8px;
+  font-family: "Kiwi Maru", serif;
+}
+.heading__h2-en {
+      font-family: "Caveat", cursive;
+      /*! font-family: serif; */
+      letter-spacing: 0.1em;
+      color: var(--subcolor);
+    }
+@media(min-width:768px){
+  .consept-text{
+  margin-left: 20%;
+}
+}
+.consept-text {
+  margin-bottom: 60px;
+}
+.consept-text__item{
+  margin-bottom: 20px;
+}
+/* ---------------- */
+/* slider */
+/* ---------------- */
+.imgarea{
+  border-radius: 1rem;
+}
+.slider-contents{
+  width: 100vw;
+   margin-left: calc(-50vw + 50%);
+}
+/* スライド同士の間隔を10pxあけたい場合 */
+.slider .slick-slide {
+  margin: 0 5px; /* 左右に5pxずつ余白 → 合計10px */
+}
+
+/* 全体の幅を調整してはみ出さないようにする */
+ .slider {
+  margin: 0 -5px; /* 外側にマイナス指定で帳尻合わせ */
+} 
+/* ---------------- */
+/* orner */
+/* ---------------- */
+.orner-section {
+ display: flex;
+ flex-direction: row-reverse;
+ position: relative;
+ /*! background-color: aliceblue; */
+ align-items: center;
+ /*! padding-left: 10px; */
+ margin-top: 300px;
+}
+
+.orner-section__text {
+  width: 50%;
+  padding-left: 5%;
+}
+.orner-section__text--en {
+  font-family: 'Caveat', cursive;
+  font-size: clamp(60px,10vw,130px);
+  color: darksalmon;
+  font-weight: 800;
+  position: absolute;
+  top: -40%;
+  right: 10%;
+  transform: translateX(10%);
+  text-shadow: 5px 5px 5px rgba(0,0,0,0.1);
+}
+.orner-section__image{
+  width: 50%;
+}
+.orner-section__img {
+  object-fit: cover;
+  border-radius: 20%;
+  width: 100%;
+  height: auto;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
+}
+.orner-section__text--top{
+  font-size: 20px;
+  font-weight: 800;
+  margin: 10px 0; 
+  color: var(--subfontcolor);
+}
+.orner-section__text--bottom{
+  margin: 30px auto 0 0;
+}
+.orner-section__p{
+  margin-bottom: 10px;;
+}
+@media(max-width:1000px){
+  .orner-section{
+    flex-direction: column-reverse; 
+    margin-top: 100px;    
+  }
+   .orner-section__text--en{
+    top:-10%;
+    white-space: nowrap;
+    right: 50%;
+    transform: translateX(50%);
+  }
+  .orner-section__text {
+  width: 100%;
+  padding: 5%;
+  text-align: center;
+}
+.orner-section__image{
+  width: 80%;
+}
+  .orner-section__text--top{
+    font-size: 16px;
+  }
+ .orner-section__text--bottom {
+    text-align: center;
+  }
+}
+/* ---------------- */
+/* lineup */
+/* ---------------- */
+#lineup{
+  width: 100vw;              /* 画面いっぱいに広げる */
+  position: relative;        /* 必要なら子要素のために */
+  left: 50%;                 /* 中央基準にして */
+  right: 50%;
+  margin-left: -50vw;        /* 強制的に中央から -50vw ずらすことで全幅に */
+  margin-right: -50vw;
+  background-color: #f4cba4; 
+  padding: 150px 16px;
+}
+#lineup::before,
+#lineup::after {
+  content: "";
+  width: 100vw;
+  height: auto;
+  aspect-ratio: 25/1;
+  display: block;
+  position: absolute;
+   background-size: cover;
+  left: 50%;
+  margin-left: -50vw;
+  }
+  #lineup::before{
+    top: -3.8vw;
+    background-image: url(../images/wave.svg);
+  }
+  #lineup::after {
+  background-image: url(../images/wave2.svg);
+  bottom: -3.8vw;
+  }
+.deco-circle{
+  position: absolute;
+  width: 200px;
+  height: auto;
+  top:-50px;
+}
+.lineup-heading__h2{
+  justify-content: center;
+  margin: 0 auto 60px;
+  gap: 5px;
+}
+.lineup__img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
+  object-fit: cover;
+  border-radius: 40% 50% 50% 30%/50%;
+
+}
+.lineup__image{
+  max-width: 800px;
+  margin: 0 auto 80px;
+  width:80%;
+}
+.lineup__list {
+  display: flex;
+  margin: 0 10%;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.lineup__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  width: 48%;
+  margin: 0 auto;
+}
+.lineup__contents {
+  width: 70%;
+  padding-left: 5%;
+}
+.lineup__subimage{
+width: 30%;
+/*! background-color: #eee5cd; */
+border-radius: 10%;
+/*! height: auto; */
+aspect-ratio: 1 / 1;
+display: flex;
+justify-content: center;
+align-items: center;
+box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
+background: linear-gradient(#fff5da, #fff5fc);
+}
+.lineup__subimage:first-child{
+background-color: var(--maincolor);
+
+}
+.lineup__subimage-img{
+  width: 80%;
+ 
+}
+.lineup__label {
+  font-weight: 600; 
+  margin-bottom: 10px;
+}
+.lineup__label::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: #eaa6b2;
+  margin-right: 5px;
+}
+.lineup__text {
+  margin-bottom: 5px;
+}
+@media(max-width:768px){
+  .lineup__list{
+    flex-direction: column;
+    margin: 0;
+    gap: 0;
+  }
+  .lineup__item{
+    width: 100%;
+    margin: 0 auto 40px;
+  }
+}
+/* ---------------- */
+/* footer */
+/* ---------------- */
+#footer{  
+  margin: 150px auto 50px;
+}
+#footer .heading__h2{
+  margin-bottom: 50px;
+}
+@media(min-width:768px){
+  .footer__list{
+  margin-left: 20%;
+}
+}
+
+.footer__list {
+  margin: 0 100px 60px 0;
+  /*! font-size: 12px; */
+}
+@media(min-width:768px){
+  .footer__list{
+    font-size: var(--main-font);
+      
+  }
+}
+
+.js-fadeup {
+}
+.footer__text {
+  font-size: 14px;
+}
+.footer__text--top::after{
+  content: "";
+  width: 20px;
+  height: 1px;
+  background-color: var(--subcolor);
+  top: 0;
+  left: 5px;
+  display: inline-block;
+  
+  position: relative;
+}
+.fa-brands {
+}
+.fa-instagram {
+}
+.footer__icon {
+  font-size: 18px;
+}
+.footer__link {
+  color: #da7707;
+  border-bottom: 1px solid;
+  display: inline-block;
+  /*! font-size: var(--main-font); */
+  margin-bottom: 5px;
+}
+.footer__text--bottom{
+  padding-left: 10px;
+  position: relative;
+}
+.footer__text--bottom::before{
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: #eaa6b2;
+  margin-right: 5px;
+  
+  /*! content: "・" */
+  /*! font-size: var(--main-font); */
+  position: absolute;
+  top: 7px;
+  left: 0px;
+}
+.footer__item{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 20px;
+  margin-bottom: 10px
+}
+#footer .onlineshop-btn{
+  margin-bottom: 30px;
+  /*! border: 0.2px solid #ebd9cb; */
+}
+
+/* ---------------- */
+/* header */
+/* ---------------- */

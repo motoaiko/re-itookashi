@@ -37,7 +37,13 @@
 /* ---------------- */
 /* mobile first 共通設定 */
 /* ---------------- */
-
+html,
+body {
+  overflow-x: hidden;
+  /* 横方向のはみ出しを隠す */
+  width: 100%;
+  /* 幅を画面ぴったりに固定 */
+}
 html {
   scroll-padding-top: 15vh;
   scroll-behavior: smooth;
@@ -580,7 +586,7 @@ justify-content: center;
   margin-left: -50vw;        
   margin-right: -50vw;
   background-color:var(--color-bg-peach); 
-  padding: 150px 16px;
+  padding: 150px 0px;
 }
 #lineup::before,
 #lineup::after {
@@ -593,7 +599,7 @@ justify-content: center;
   background-size: cover;
   left: 50%;
   /* margin-left: -50vw; */
-  transform: translateX(-51%);
+  transform: translateX(-50%);
   }
   #lineup::before{
     top: -3.8vw;

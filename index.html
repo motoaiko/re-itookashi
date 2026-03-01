@@ -11,7 +11,7 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="いとおかし">
 
-    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/ress.css">
     <link rel="stylesheet" href="css/slick-theme.css">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/style.css">
@@ -39,10 +39,6 @@
     <title>いとおかし</title>
 </head>
 <body>
-<!-- ✅ ローディング画面 -->
-<div class="loader_bg">
-    <img class="loader_img" src="images/main-logo.png" alt="ローディング画面">
-</div>
     
 <header>
     <div class="header-section">
@@ -53,7 +49,8 @@
 
         <div class="header-section__menu">
         <!-- オンラインショップ --> 
-            <a href="#" class="onlineshop-btn">online shop</a>
+            <a href="https://itookashi.thebase.in/" class="onlineshop-btn" target="_blank">online shop</a>
+
             <!-- ハンバーガーメニュー -->
             <div class="hamburger">
                 <span></span>
@@ -68,26 +65,19 @@
                     </li>            
                     <li><a href="index.html#lineup" class="nav__text">Lineup</a>
                     </li>
-                    <li><a href="#" class="nav__text">Instagram</a>
+                    <li><a href="https://www.instagram.com/ito_.okashi/" class="nav__text">Instagram</a>
                     </li>
-                    <li><a href="#" class="nav__text">Online Shop</a>
+                    <li><a href="https://itookashi.thebase.in/" class="nav__text">Online Shop</a>
                     </li>
                 </ul>
             </nav>
         </div>    
     </div> 
-        <!-- topへ戻るボタン -->
-
-      <div>
-        <a id="pageTop" href="#">
-          <span class="arrow"></span>
-        </a>
-      </div>
    
 </header>
 <!-- main -->
 <main>
-    <div id="kv" class="wrapper kv-slider">
+    <section id="kv" class="wrapper kv-slider">
         <picture class="kv-img">
         <!-- pc -->
             <source srcset="images/kv-pc.webp" media="(min-width:768px)">
@@ -99,7 +89,7 @@
         <div class="scroll fade-up pc">
         <span>scroll</span>
         </div> 
-    </div>
+    </section>
 
     <section id="concept" class="wrapper">
         <div class="heading__h2 js-fadeup">
@@ -156,12 +146,11 @@
         </div>
     </section>
 
-
-    <div id="orner" class="wrapper orner-section js-fadeup">
+    <section id="orner" class="wrapper orner-section js-fadeup">
         <div class="orner-section__text">
                 <p class="orner-section__text--top js-fadeup">いとおかし代表</p>
-                <p class="orner-section__text--top js-fadeup">きむらるみ</p>
-                <p class="orner-section__text--en">rumi kimura</p>
+                <p class="orner-section__text--top js-fadeup">秋本るみ</p>
+                <p class="orner-section__text--en">rumi akiimoto</p>
             <div class="orner-section__text--bottom js-fadeup">
                 <p class="orner-section__p">高校生の頃、過度なダイエットで過食障害に。</p> 
                 <p class="orner-section__p">食べる罪悪感を和らげてくれたのは、<br>自分で工夫した手作りお菓子でした。</p>
@@ -170,15 +159,15 @@
             </div>
             
         </div>
-        <div class="orner-section__image"><img class="orner-section__img" src="images/orner2.webp" alt="オーナー写真">
+        <div class="orner-section__image"><img class="orner-section__img" src="images/rumi2.png" alt="オーナー写真">
         </div>
-    </div>
+    </section>
 
     <section id="lineup">
         <div class="deco-circle"><img src="images/bg-img.png" alt="">
         </div>
         <div class="heading__h2 lineup-heading__h2 js-fadeup">
-            <h2 class="heading__h2-ja">商品紹介</h2>
+            <h2 class="heading__h2-ja">商品のご紹介</h2>
             <h2 class="heading__h2-en">Cookie Lineup</h2>
         </div>
 
@@ -275,13 +264,7 @@
         </ul>
 
     </section>
-
-    <!-- topへ戻るボタン -->
-     <div class="page-top">
-     </div>
-
 </main>
-
 
 <footer id="footer" class="wrapper">
         <div class="heading__h2 js-fadeup">
@@ -291,14 +274,14 @@
         <div class="footer__list">
             <ul>
             
-                <li><a href="#" class="onlineshop-btn">online shop</a>
+                <li><a href="https://itookashi.thebase.in/" class="onlineshop-btn">online shop</a>
                 </li>
                 <li class="footer__item">
                     <p class="footer__text--top">Follow us</p>
-                    <a href="#"><i class="fa-brands fa-instagram footer__icon"></i></a>
+                    <a href="https://www.instagram.com/ito_.okashi/"><i class="fa-brands fa-instagram footer__icon"></i></a>
                 </li>
                 <li>
-                    <a href="#" class="footer__link"><p>日本摂食障害協会</p></a>
+                    <a href="https://www.jafed.jp/" class="footer__link"><p>日本摂食障害協会</p></a>
                     <p class="footer__text--bottom">いとおかしの売り上げの一部は、日本摂食障害協会に寄付しております</p>
                 </li>
             </ul>
@@ -312,6 +295,13 @@
     <p class="copyright__text">&copy; 2025 itookashi All rights reserved.</p>
     </div>
 </footer>
+
+<!-- topへ戻るボタン -->
+<div>
+    <a id="pageTop" class="page-top" href="#">
+        <span class="arrow"></span>
+    </a>
+</div>
 
 </body>
 </html>
